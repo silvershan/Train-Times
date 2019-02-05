@@ -10,7 +10,8 @@ var config = {
 
   var trainData = firebase.database();
 
-  $("#addTrainBtn").on("click",function(){
+  $("#submit").on("click",function(event){
+        event.preventDefault();
         var trainName = $("#trainNameForm").val().trim();
         var destination = $("#destination").val().trim();
         var firstTrain = moment($("#firstTrain").val().trim(), "HH:mm").subtract(10,"years").format("X");
