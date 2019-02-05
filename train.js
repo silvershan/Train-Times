@@ -13,7 +13,7 @@ var config = {
   $("#addTrainBtn").on("click",function(){
         var trainName = $("#trainNameForm").val().trim();
         var destination = $("#destination").val().trim();
-        var firstTrain = moment($("#firstTrain").val().trim(), "HH:mm").sutract(10,"years").format("X");
+        var firstTrain = moment($("#firstTrain").val().trim(), "HH:mm").subtract(10,"years").format("X");
         var frequency = $("#frequency").val().trim();
 
         var newTrain = {
@@ -53,4 +53,3 @@ var config = {
 
       $("#trainTable > tBody").append("<tr><td>"+name+"</td><td>"+destination+"</td><td>"+frequency+"</td><td>"+arrival+"</td><td>"+minutes+"</td></tr>");
   })
-
